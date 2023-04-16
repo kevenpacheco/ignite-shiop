@@ -31,11 +31,18 @@ export const Product = styled('div', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    gap: '1rem',
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     padding: '2rem',
     transform: 'translateY(110%)',
     opacity: 0,
     transition: 'all 0.2s ease-in-out',
+
+    div: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '0.25rem',
+    },
 
     strong: {
       fontSize: '$lg',

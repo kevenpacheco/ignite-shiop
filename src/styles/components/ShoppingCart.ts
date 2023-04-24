@@ -12,6 +12,13 @@ export const ShoppingCartContainer = styled('aside', {
   backgroundColor: '$gray800',
   display: 'flex',
   flexDirection: 'column',
+  zIndex: 2,
+  transform: 'translateX(150%)',
+  transition: 'transform 0.3s linear',
+
+  '&.show': {
+    transform: 'translateX(0)',
+  },
 
   h2: {
     fontSize: '1.25rem',
@@ -84,30 +91,45 @@ export const ShoppingCartItem = styled('li', {
     },
   },
 
-  h3: {
-    color: '$gray300',
-    fontSize: '1.125rem',
-    fontWeight: 400,
-    marginBottom: 2,
-  },
+  '.details': {
+    width: '100%',
 
-  strong: {
-    color: '$gray100',
-    fontSize: '1.125rem',
-    marginBottom: 8,
-    display: 'block',
-  },
-
-  button: {
-    backgroundColor: 'transparent',
-    color: '$green500',
-    fontWeight: 700,
-    border: 0,
-
-    '&:hover': {
-      color: '$green300',
+    h3: {
+      color: '$gray300',
+      fontSize: '1.125rem',
+      fontWeight: 400,
+      marginBottom: 2,
     },
-  }
+
+    div: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      gap: 8,
+    },
+  
+    strong: {
+      color: '$gray100',
+      fontSize: '1.125rem',
+      marginBottom: 8,
+    },
+  
+    span: {
+      color: '$gray300',
+    },
+  
+    button: {
+      backgroundColor: 'transparent',
+      color: '$green500',
+      fontWeight: 700,
+      border: 0,
+      cursor: 'pointer',
+  
+      '&:hover': {
+        color: '$green300',
+      },
+    },
+  },
 })
 
 export const ShoppingCartSummary = styled('div', {

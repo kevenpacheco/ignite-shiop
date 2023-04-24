@@ -17,7 +17,7 @@ export const ShoppingCartButtonContainer = styled('button', {
           backgroundColor: '$green300',
         }
       },
-      secondary: {
+      header: {
         backgroundColor: '$gray800',
         color: '$gray500',
         '&:hover': {
@@ -25,7 +25,7 @@ export const ShoppingCartButtonContainer = styled('button', {
         }
       }
     },
-    showItemsCount: {
+    isShowItemsCount: {
       true: {
         position: 'relative',
         '&::after': {

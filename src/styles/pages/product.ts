@@ -1,6 +1,7 @@
 import { styled } from "..";
 
 export const ProductContainer = styled('main', {
+  flex: 1,
   display: 'grid',
   gridTemplateColumns: '1fr 1fr',
   alignItems: 'stretch',
@@ -45,29 +46,9 @@ export const ProductDetails = styled('div', {
 
   p: {
     marginTop: '2.5rem',
+    marginBottom: '1.5rem',
     fontSize: '$md',
     lineHeight: 1.6,
     color: '$gray300',
   },
-
-  button: {
-    marginTop: 'auto',
-    backgroundColor: '$green500',
-    border: 0,
-    color: '$white',
-    borderRadius: 8,
-    padding: '1.25rem',
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    fontSize: '$md',
-
-    '&:disabled': {
-      opacity: 0.6,
-      cursor: 'not-allowed',
-    },
-
-    '&:not(:disabled):hover': {
-      backgroundColor: '$green300',
-    }
-  }
 });
